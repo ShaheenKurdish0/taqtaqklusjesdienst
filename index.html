@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaqTaq KLUSJESDIENST - Kleine Herstellingen aan Woningen</title>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-purple: #52006A;
+            --dark-purple: #320042;
+            --accent-purple: #8612A5;
+            --light-purple: #F3E8FF;
+            --white: #FFFFFF;
+            --gray-light: #F9F9FB;
+            --text-dark: #222222;
+            --text-muted: #666666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--gray-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background-color: var(--dark-purple);
+            color: var(--white);
+            padding: 8px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+        }
+
+        .top-bar a {
+            color: var(--white);
+            text-decoration: none;
+            margin-left: 12px;
+        }
+
+        /* Navigation Header */
+        header {
+            background: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-text h1 {
+            color: var(--primary-purple);
+            font-size: 1.6rem;
+            line-height: 1.1;
+        }
+
+        .logo-text span {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-purple);
+        }
+
+        .btn-call {
+            background-color: var(--primary-purple);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn-call:hover {
+            background-color: var(--accent-purple);
+        }
+
+        /* Hero Banner */
+        .hero {
+            background: linear-gradient(135deg, rgba(82,0,106,0.9), rgba(50,0,66,0.95)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1350&q=80') center/cover;
+            color: var(--white);
+            padding: 100px 5% 80px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: var(--light-purple);
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: var(--white);
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-facebook {
+            background-color: #1877F2;
+            color: var(--white);
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: var(--white);
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 70px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            color: var(--primary-purple);
+            font-size: 2.2rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-purple);
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 5px solid var(--primary-purple);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card i {
+            color: var(--primary-purple);
+            font-size: 1.5rem;
+            margin-top: 3px;
+        }
+
+        .service-card p {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        /* Photo Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            height: 220px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            width: 100%;
+            padding: 15px 10px 10px;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        /* Info Section (Hours & Contact) */
+        .info-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .info-box h3 {
+            color: var(--primary-purple);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hours-list {
+            list-style: none;
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .contact-details p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .contact-details i {
+            color: var(--primary-purple);
+            font-size: 1.2rem;
+            width: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-purple);
+            color: var(--white);
+            text-align: center;
+            padding: 25px 5%;
+            margin-top: 50px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            .top-bar {
+                flex-direction: column;
+                gap: 5px;
+                text-align: center;
+            }
+            .hero h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Contact Bar -->
+    <div class="top-bar">
+        <div>
+            <i class="fa-solid fa-location-dot"></i> Antwerpen, België &nbsp;|&nbsp; 
+            <i class="fa-solid fa-clock"></i> 7/7 Open
+        </div>
+        <div>
+            <a href="tel:0499160071"><i class="fa-solid fa-phone"></i> 0499 16 00 71</a>
+            <a href="https://www.facebook.com/share/1FEiHTjVkY/?mibextid=wwXIfr" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
+            <a href="https://www.instagram.com/taqtaq.herstellingen/" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <i class="fa-solid fa-screwdriver-wrench fa-2x" style="color: var(--primary-purple);"></i>
+                <div class="logo-text">
+                    <h1>TaqTaq</h1>
+                    <span>KLUSJESDIENST</span>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#diensten">Diensten</a></li>
+                <li><a href="#foto-s">Foto's</a></li>
+                <li><a href="#uren">Openingsuren</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="tel:0499160071" class="btn-call"><i class="fa-solid fa-phone"></i> Bel Nu</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Kleine Herstellingen aan Woningen</h2>
+            <p>Uw betrouwbare klusjesdienst in Antwerpen en omgeving. Snel, netjes en kwalitatief uitgevoerd!</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/32499160071" target="_blank" class="btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                <a href="https://www.facebook.com/share/1FEiHTjVkY/?mibextid=wwXIfr" target="_blank" class="btn-facebook"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                <a href="https://www.instagram.com/taqtaq.herstellingen/" target="_blank" class="btn-instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diensten Section -->
+    <section id="diensten">
+        <div class="section-title">
+            <h2>Onze Diensten</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card"><i class="fa-solid fa-check-circle"></i><p>Kraan herstellen of vervangen</p></div>
+            <div class="service-card"><i class="fa-solid fa-check-circle"></i><p>Sifon vervangen</p></div>
+            <div class="service-card"><i class="fa-solid fa-check-circle"></i><p>Kleine waterlekken herstellen</p></div>
+            <div class="service-card"><i class="fa-solid fa-check-circle"></i><p>Toilet herstellen</p></div>
+            <div class="service-card"><i class="fa-solid fa-check-circle"></i><p>Wastafel herstellingen of vervangen</p></div>
+            <div class="service-card"><i class="fa-solid fa-check-circle"></i><p>Kleine herstellingen in badkamer</p></div>
+            <div class="service-card"><i class="fa-solid fa-check-circle"></i><p>Kleine herstellingen in keuken</p></div>
+            <div class="service-card"><i class="fa-solid fa-check-circle"></i><p>Silicone verwijderen en vernieuwen</p></div>
+            <div class="service-card"><i class="fa-solid fa-check-circle"></i><p>Kleine montagewerken</p></div>
+            <div class="service-card"><i class="fa-solid fa-check-circle"></i><p>Deuren herstellingen of vervangen</p></div>
+            <div class="service-card"><i class="fa-solid fa-check-circle"></i><p>Kleine herstellingen aan ramen</p></div>
+            <div class="service-card"><i class="fa-solid fa-check-circle"></i><p>Planken en meubels monteren</p></div>
+            <div class="service-card"><i class="fa-solid fa-check-circle"></i><p>Gaten en beschadigingen herstellen & binnenschilderwerk</p></div>
+            <div class="service-card"><i class="fa-solid fa-gears"></i><p>Kleine laswerken</p></div>
+        </div>
+    </section>
+
+    <!-- Foto Gallery Section -->
+    <section id="foto-s">
+        <div class="section-title">
+            <h2>Realisaties & Werkzaamheden</h2>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="Sanitair & Badkamer">
+                <div class="gallery-caption">Sanitair & Badkamer</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1505798577917-a65157d3320a?auto=format&fit=crop&w=600&q=80" alt="Montage & Herstellingen">
+                <div class="gallery-caption">Montagewerken</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=600&q=80" alt="Binnenschilderwerk">
+                <div class="gallery-caption">Schilderwerk & Wandherstel</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=600&q=80" alt="Kleine Laswerken">
+                <div class="gallery-caption">Kleine Laswerken</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hours & Contact Section -->
+    <section id="contact">
+        <div class="info-container">
+            <!-- Openingsuren -->
+            <div class="info-box" id="uren">
+                <h3><i class="fa-solid fa-clock"></i> Openingsuren</h3>
+                <ul class="hours-list">
+                    <li><span>Maandag - Vrijdag:</span> <strong>09:00 - 17:00</strong></li>
+                    <li><span>Zaterdag:</span> <strong>10:00 - 16:00</strong></li>
+                    <li><span>Zondag:</span> <strong>10:00 - 16:00</strong></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="info-box">
+                <h3><i class="fa-solid fa-address-card"></i> Contactgegevens</h3>
+                <div class="contact-details">
+                    <p><i class="fa-solid fa-user-gear"></i> TaqTaq KLUSJESDIENST</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Antwerpen, België</p>
+                    <p><i class="fa-solid fa-phone"></i> <a href="tel:0499160071" style="color: inherit;">0499 16 00 71</a></p>
+                    <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/32499160071" target="_blank" style="color: inherit;">+32 499 16 00 71 (WhatsApp)</a></p>
+                    <p><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/taqtaq.herstellingen/" target="_blank" style="color: inherit;">@taqtaq.herstellingen</a></p>
+                    <p><i class="fa-solid fa-envelope"></i> <a href="mailto:taqtaq.klusjes@gmail.com" style="color: inherit;">taqtaq.klusjes@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 TaqTaq KLUSJESDIENST. Alle rechten voorbehouden.</p>
+    </footer>
+
+</body>
+</html>
