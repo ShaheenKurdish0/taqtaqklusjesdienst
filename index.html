@@ -132,6 +132,19 @@
             margin: 0 auto;
         }
 
+        .hero-subtag {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            backdrop-filter: blur(5px);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
         .hero h2 {
             font-size: 2.8rem;
             margin-bottom: 15px;
@@ -150,16 +163,29 @@
             flex-wrap: wrap;
         }
 
+        /* Aangepaste grotere WhatsApp Knop */
         .btn-whatsapp {
             background-color: #25D366;
             color: var(--white);
-            padding: 12px 25px;
-            border-radius: 25px;
+            padding: 14px 28px;
+            border-radius: 30px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
+            font-size: 1.1rem;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 12px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: transform 0.2s ease, background-color 0.3s;
+        }
+
+        .btn-whatsapp:hover {
+            transform: scale(1.03);
+            background-color: #20ba5a;
+        }
+
+        .btn-whatsapp i {
+            font-size: 1.8rem;
         }
 
         .btn-facebook {
@@ -314,8 +340,9 @@
         .hours-list li {
             display: flex;
             justify-content: space-between;
-            padding: 10px 0;
+            padding: 12px 0;
             border-bottom: 1px solid #eeeeee;
+            font-size: 1.05rem;
         }
 
         .contact-details p {
@@ -368,7 +395,7 @@
     <div class="top-bar">
         <div>
             <i class="fa-solid fa-location-dot"></i> Antwerpen, België &nbsp;|&nbsp; 
-            <i class="fa-solid fa-clock"></i> 7/7 Open
+            <i class="fa-solid fa-clock"></i> 24/7 Beschikbaar
         </div>
         <div>
             <a href="tel:0499160071"><i class="fa-solid fa-phone"></i> 0499 16 00 71</a>
@@ -401,10 +428,14 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
+            <div class="hero-subtag">Klusjesdienst in Antwerpen</div>
             <h2>Kleine Herstellingen aan Woningen</h2>
             <p>Uw betrouwbare klusjesdienst in Antwerpen en omgeving. Snel, netjes en kwalitatief uitgevoerd!</p>
             <div class="cta-buttons">
-                <a href="https://wa.me/32499160071" target="_blank" class="btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                <a href="https://wa.me/32499160071" target="_blank" class="btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> 
+                    Stuur een foto via WhatsApp – Gratis prijsindicatie
+                </a>
                 <a href="https://www.facebook.com/share/1FEiHTjVkY/?mibextid=wwXIfr" target="_blank" class="btn-facebook"><i class="fa-brands fa-facebook"></i> Facebook</a>
                 <a href="https://www.instagram.com/taqtaq.herstellingen/" target="_blank" class="btn-instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
             </div>
@@ -466,9 +497,9 @@
             <div class="info-box" id="uren">
                 <h3><i class="fa-solid fa-clock"></i> Openingsuren</h3>
                 <ul class="hours-list">
-                    <li><span>Maandag - Vrijdag:</span> <strong>09:00 - 17:00</strong></li>
-                    <li><span>Zaterdag:</span> <strong>10:00 - 16:00</strong></li>
-                    <li><span>Zondag:</span> <strong>10:00 - 16:00</strong></li>
+                    <li><span>Maandag - Zondag:</span> <strong>24/24 uur geopend</strong></li>
+                    <li><span>Feestdagen:</span> <strong>24/24 uur geopend</strong></li>
+                    <li><span>Status:</span> <strong style="color: #25D366;">Altijd beschikbaar (7/7)</strong></li>
                 </ul>
             </div>
 
