@@ -1,17 +1,18 @@
+```html
 <!DOCTYPE html>
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TAQ TAQ - Klusjesman in Antwerpen</title>
+
     <style>
         :root {
-            --primary: #4A154B; /* Dark Purple from branding */
-            --secondary: #EFA928; /* Gold/Yellow accent */
+            --primary: #4A154B;
+            --secondary: #EFA928;
             --light-bg: #F8F9FA;
             --dark-text: #222222;
             --white: #FFFFFF;
-            --whatsapp: #25D366;
         }
 
         * {
@@ -27,7 +28,7 @@
             line-height: 1.6;
         }
 
-        /* HEADER & HERO */
+        /* HEADER */
         header {
             background-color: var(--primary);
             color: var(--white);
@@ -36,9 +37,9 @@
         }
 
         .logo {
-            font-size: 2.2rem;
+            font-size: 2.8rem;
             font-weight: 900;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             text-transform: uppercase;
         }
 
@@ -55,11 +56,12 @@
             color: var(--secondary);
         }
 
-        .btn-group {
+        /* TOP BUTTONS */
+        .top-buttons {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             margin-top: 25px;
             flex-wrap: wrap;
         }
@@ -68,7 +70,7 @@
             display: inline-block;
             background-color: var(--secondary);
             color: #000;
-            padding: 12px 24px;
+            padding: 12px 22px;
             text-decoration: none;
             font-weight: bold;
             font-size: 1.1rem;
@@ -77,14 +79,24 @@
             transition: transform 0.2s;
         }
 
-        .cta-btn.whatsapp {
-            background-color: var(--whatsapp);
-            color: #fff;
-            font-size: 0.95rem;
-            padding: 10px 18px;
+        .cta-btn:hover {
+            transform: scale(1.05);
         }
 
-        .cta-btn:hover {
+        .whatsapp-btn {
+            display: inline-block;
+            background-color: #25D366;
+            color: #fff;
+            padding: 9px 17px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+
+        .whatsapp-btn:hover {
             transform: scale(1.05);
         }
 
@@ -95,13 +107,12 @@
             padding: 0 20px;
         }
 
-        /* SERVICES SECTION */
+        /* SERVICES */
         .section-title {
             text-align: center;
             color: var(--primary);
             font-size: 1.8rem;
             margin-bottom: 20px;
-            position: relative;
         }
 
         .services-grid {
@@ -149,7 +160,7 @@
             margin-bottom: 10px;
         }
 
-        /* CONTACT SECTION */
+        /* CONTACT */
         .contact-box {
             background-color: var(--primary);
             color: var(--white);
@@ -174,25 +185,6 @@
             font-weight: bold;
         }
 
-        .social-link {
-            margin-top: 15px;
-            display: inline-block;
-        }
-
-        .social-link a {
-            color: var(--white);
-            background: rgba(255, 255, 255, 0.15);
-            padding: 8px 16px;
-            border-radius: 20px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background 0.2s;
-        }
-
-        .social-link a:hover {
-            background: rgba(255, 255, 255, 0.3);
-        }
-
         /* FOOTER */
         footer {
             text-align: center;
@@ -202,80 +194,210 @@
             font-size: 0.9rem;
         }
 
-        footer a {
-            color: var(--secondary);
+        /* TIKTOK */
+        .tiktok-link {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            color: var(--white);
             text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .tiktok-link {
+                position: static;
+                display: block;
+                margin-bottom: 15px;
+            }
+
+            .logo {
+                font-size: 2.2rem;
+            }
+
+            .tagline {
+                font-size: 1rem;
+            }
+
+            .top-buttons {
+                gap: 8px;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <!-- HEADER -->
     <header>
-        <div class="logo">TaqTaq Klusjesman in Antwerpen</div>
-        <div class="tagline">KLUSJESDIENST & HERSTELLINGEN</div>
-        <div class="hero-slogan">Snel • Netjes • Betrouwbaar</div>
-        <div class="btn-group">
-            <a href="tel:0499160071" class="cta-btn">📞 Bel 0499 16 00 71</a>
-            <a href="https://wa.me/32499160071" target="_blank" class="cta-btn whatsapp">💬 WhatsApp</a>
+
+        <!-- TikTok -->
+        <a
+            href="https://www.tiktok.com/@klusjesdinstinantwerpen?_r=1&_t=ZG-9AHTWQIC68O"
+            target="_blank"
+            class="tiktok-link">
+            🎵 TikTok
+        </a>
+
+        <div class="logo">TaqTaq</div>
+
+        <div class="tagline">
+            Klusjesman in Antwerpen
         </div>
+
+        <div class="hero-slogan">
+            Snel • Netjes • Betrouwbaar
+        </div>
+
+        <!-- BEL + WHATSAPP -->
+        <div class="top-buttons">
+
+            <a href="tel:0499160071" class="cta-btn">
+                📞 Bel Nu
+            </a>
+
+            <a
+                href="https://wa.me/32499160071"
+                target="_blank"
+                class="whatsapp-btn">
+                💬 WhatsApp
+            </a>
+
+        </div>
+
     </header>
 
     <div class="container">
 
         <!-- SERVICES -->
         <h2 class="section-title">Onze Diensten</h2>
+
         <div class="services-grid">
-            <div class="service-card"><span>✓</span> Kraan herstellen of vervangen</div>
-            <div class="service-card"><span>✓</span> Sifon vervangen</div>
-            <div class="service-card"><span>✓</span> Waterlekken herstellen</div>
-            <div class="service-card"><span>✓</span> Toilet herstellen</div>
-            <div class="service-card"><span>✓</span> Herstellingen aan wastafel</div>
-            <div class="service-card"><span>✓</span> Badkamer herstellingen</div>
-            <div class="service-card"><span>✓</span> Silicone verwijderen en vernieuwen</div>
-            <div class="service-card"><span>✓</span> Montagewerken</div>
-            <div class="service-card"><span>✓</span> Planken en meubels monteren</div>
-            <div class="service-card"><span>✓</span> Kleine gaten & beschadigingen herstellen</div>
-            <div class="service-card"><span>✓</span> Kleine laswerken</div>
+
+            <div class="service-card">
+                <span>✓</span>
+                Kraan herstellen of vervangen
+            </div>
+
+            <div class="service-card">
+                <span>✓</span>
+                Sifon vervangen
+            </div>
+
+            <div class="service-card">
+                <span>✓</span>
+                Waterlekken herstellen
+            </div>
+
+            <div class="service-card">
+                <span>✓</span>
+                Toilet herstellen
+            </div>
+
+            <div class="service-card">
+                <span>✓</span>
+                Herstellingen aan wastafel
+            </div>
+
+            <div class="service-card">
+                <span>✓</span>
+                Badkamer herstellingen
+            </div>
+
+            <div class="service-card">
+                <span>✓</span>
+                Silicone verwijderen en vernieuwen
+            </div>
+
+            <div class="service-card">
+                <span>✓</span>
+                Montagewerken
+            </div>
+
+            <div class="service-card">
+                <span>✓</span>
+                Herstellingen aan deuren
+            </div>
+
+            <div class="service-card">
+                <span>✓</span>
+                Planken en meubels monteren
+            </div>
+
+            <div class="service-card">
+                <span>✓</span>
+                Kleine gaten & beschadigingen herstellen
+            </div>
+
+            <div class="service-card">
+                <span>✓</span>
+                Kleine laswerken
+            </div>
+
         </div>
 
         <!-- INFO CARDS -->
         <div class="info-grid">
+
             <div class="info-card">
                 <h3>📍 Verplaatsing</h3>
-                <p>Verplaatsing binnen <strong>Antwerpen</strong>.</p>
+                <p>
+                    Verplaatsing binnen <strong>Antwerpen</strong>.
+                </p>
             </div>
+
             <div class="info-card">
                 <h3>🛠️ Materiaal</h3>
-                <p>Materiaal wordt apart aangerekend.</p>
+                <p>
+                    Materiaal wordt apart aangerekend.
+                </p>
             </div>
+
             <div class="info-card">
                 <h3>💡 Geen Verrassingen</h3>
-                <p>De prijs wordt vooraf duidelijk besproken.</p>
+                <p>
+                    De prijs wordt vooraf duidelijk besproken.
+                </p>
             </div>
+
         </div>
 
-        <!-- CONTACT / AFSPRAAK -->
+        <!-- CONTACT -->
         <div class="contact-box">
+
             <h2>Maak een afspraak</h2>
-            <p>Bel of stuur een bericht voor een snelle afspraak!</p>
+
+            <p>
+                Bel of stuur een bericht voor een snelle afspraak!
+            </p>
+
             <div class="contact-info">
-                📞 Telefoon / WhatsApp: <a href="tel:0499160071">0499 16 00 71</a>
+                📞 Telefoon / WhatsApp:
+                <a href="tel:0499160071">
+                    0499 16 00 71
+                </a>
             </div>
+
             <div class="contact-info">
-                ✉️ E-mail: <a href="mailto:taqtaq.klusjes@gmail.com">taqtaq.klusjes@gmail.com</a>
+                ✉️ E-mail:
+                <a href="mailto:taqtaq.klusjes@gmail.com">
+                    taqtaq.klusjes@gmail.com
+                </a>
             </div>
-            <div class="social-link">
-                🎵 Volg ons op TikTok: <a href="https://www.tiktok.com/@klusjesdinstinantwerpen?_r=1&_t=ZG-9AHTWQIC68O" target="_blank">@klusjesdinstinantwerpen</a>
-            </div>
+
         </div>
 
     </div>
 
     <!-- FOOTER -->
     <footer>
-        <p>© TAQ TAQ Klusjesdienst - Antwerpen. Alle rechten voorbehouden. | <a href="https://www.tiktok.com/@klusjesdinstinantwerpen?_r=1&_t=ZG-9AHTWQIC68O" target="_blank">TikTok</a></p>
+        <p>
+            &copy; TAQ TAQ Klusjesdienst - Antwerpen.
+            Alle rechten voorbehouden.
+        </p>
     </footer>
 
 </body>
 </html>
+```
