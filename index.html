@@ -38,7 +38,7 @@
             line-height: 1.6;
         }
 
-        /* Top Bar (Oranje/Donker helemaal bovenaan) */
+        /* Top Bar */
         .top-bar {
             background-color: var(--dark-orange);
             color: var(--white);
@@ -62,7 +62,7 @@
             font-size: 1.05rem;
         }
 
-        /* Navigation Header (Zwarte balk) */
+        /* Navigation Header */
         header {
             background: var(--header-bg);
             position: sticky;
@@ -81,10 +81,17 @@
             margin: 0 auto;
         }
 
+        /* Logo met Custom SVG */
         .logo {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
+        }
+
+        .logo-icon-svg {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
         }
 
         .logo-text h1 {
@@ -169,7 +176,6 @@
             margin: 0 auto;
         }
 
-        /* Aangepaste subtag: Zwarte achtergrond met witte tekst */
         .hero-subtag {
             display: inline-block;
             background-color: #141414;
@@ -229,7 +235,7 @@
             font-size: 1.2rem;
         }
 
-        /* TikTok Knop met groot logo */
+        /* TikTok Knop */
         .btn-tiktok {
             background-color: #111111;
             color: var(--white);
@@ -462,11 +468,35 @@
         </div>
     </div>
 
-    <!-- Main Navigation Header -->
+    <!-- Main Navigation Header met Custom Logo -->
     <header>
         <div class="navbar">
             <div class="logo">
-                <i class="fa-solid fa-screwdriver-wrench fa-2x" style="color: var(--primary-orange);"></i>
+                <!-- SVG Logo gebaseerd op jouw ontwerp -->
+                <svg class="logo-icon-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Linkerkant (Oranje Huis met Raam & Sleutel) -->
+                    <path d="M 92,28 L 22,90 L 22,185 L 92,185 Z" fill="#D9531E"/>
+                    
+                    <!-- Vierdelig Raam (Sparing/Uitgesneden in het Huis) -->
+                    <rect x="44" y="92" width="18" height="15" rx="1" fill="#141414"/>
+                    <rect x="66" y="92" width="18" height="15" rx="1" fill="#141414"/>
+                    <rect x="44" y="111" width="18" height="15" rx="1" fill="#141414"/>
+                    <rect x="66" y="111" width="18" height="15" rx="1" fill="#141414"/>
+                    
+                    <!-- Moersleutel Vorm (Sparing/Uitgesneden onderaan het Huis) -->
+                    <path d="M 92,143 L 64,143 C 58,136 47,136 42,142 C 37,148 37,158 42,164 C 47,170 58,170 64,163 L 92,163 Z" fill="#141414"/>
+                    <path d="M 45,147 L 53,153 L 45,159 Z" fill="#D9531E"/>
+
+                    <!-- Rechterkant (Zwarte Daklijn + Hamer/T-vorm) -->
+                    <!-- Schuine Daklijn -->
+                    <path d="M 98,32 L 165,95 L 165,182 L 155,182 L 155,100 L 98,47 Z" fill="#FFFFFF"/>
+
+                    <!-- Hamer Steel & Kop (T-vorm) -->
+                    <path d="M 120,102 L 120,182 L 132,182 L 132,102 Z" fill="#FFFFFF"/>
+                    <!-- Hamerkop -->
+                    <path d="M 100,102 C 100,95 106,93 118,93 L 140,93 C 147,93 152,102 152,112 C 142,110 134,103 134,103 L 100,102 Z" fill="#FFFFFF"/>
+                </svg>
+
                 <div class="logo-text">
                     <h1>TaqTaq</h1>
                     <span>Klusjesman in Antwerpen</span>
@@ -489,7 +519,6 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <!-- Aangepaste tag: Zwarte achtergrond met witte tekst -->
             <div class="hero-subtag">Klusjesdienst in Antwerpen</div>
             <h2>Herstellingen aan Woningen</h2>
             <p>Uw betrouwbare klusjesdienst in Antwerpen en omgeving. Snel, netjes en kwalitatief uitgevoerd!</p>
