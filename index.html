@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TaqTaq KLUSJESDIENST - Kleine Herstellingen aan Woningen</title>
+    <title>TaqTaq – Klusjesman in Antwerpen - Herstellingen aan Woningen</title>
     <!-- Google Fonts & FontAwesome Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -105,6 +105,12 @@
             color: var(--primary-purple);
         }
 
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
         .btn-call {
             background-color: var(--primary-purple);
             color: var(--white);
@@ -117,6 +123,24 @@
 
         .btn-call:hover {
             background-color: var(--accent-purple);
+        }
+
+        .btn-top-whatsapp {
+            background-color: #25D366;
+            color: var(--white);
+            padding: 8px 14px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: background 0.3s;
+        }
+
+        .btn-top-whatsapp:hover {
+            background-color: #20ba5a;
         }
 
         /* Hero Banner */
@@ -163,7 +187,7 @@
             flex-wrap: wrap;
         }
 
-        /* Aangepaste grotere WhatsApp Knop */
+        /* Aangepaste WhatsApp Knop */
         .btn-whatsapp {
             background-color: #25D366;
             color: var(--white);
@@ -188,20 +212,8 @@
             font-size: 1.8rem;
         }
 
-        .btn-facebook {
-            background-color: #1877F2;
-            color: var(--white);
-            padding: 12px 25px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .btn-instagram {
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        .btn-tiktok {
+            background-color: #000000;
             color: var(--white);
             padding: 12px 25px;
             border-radius: 25px;
@@ -399,8 +411,7 @@
         </div>
         <div>
             <a href="tel:0499160071"><i class="fa-solid fa-phone"></i> 0499 16 00 71</a>
-            <a href="https://www.facebook.com/share/1FEiHTjVkY/?mibextid=wwXIfr" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
-            <a href="https://www.instagram.com/taqtaq.herstellingen/" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="https://www.tiktok.com/@klusjesdinstinantwerpen?_r=1&_t=ZG-9AHTWQIC68O" target="_blank"><i class="fa-brands fa-tiktok"></i> TikTok</a>
         </div>
     </div>
 
@@ -411,7 +422,7 @@
                 <i class="fa-solid fa-screwdriver-wrench fa-2x" style="color: var(--primary-purple);"></i>
                 <div class="logo-text">
                     <h1>TaqTaq</h1>
-                    <span>KLUSJESDIENST</span>
+                    <span>Klusjesman in Antwerpen</span>
                 </div>
             </div>
             <ul class="nav-links">
@@ -421,7 +432,10 @@
                 <li><a href="#uren">Openingsuren</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <a href="tel:0499160071" class="btn-call"><i class="fa-solid fa-phone"></i> Bel Nu</a>
+            <div class="nav-buttons">
+                <a href="tel:0499160071" class="btn-call"><i class="fa-solid fa-phone"></i> Bel Nu</a>
+                <a href="https://wa.me/32499160071" target="_blank" class="btn-top-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+            </div>
         </div>
     </header>
 
@@ -429,15 +443,14 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <div class="hero-subtag">Klusjesdienst in Antwerpen</div>
-            <h2>Kleine Herstellingen aan Woningen</h2>
+            <h2>Herstellingen aan Woningen</h2>
             <p>Uw betrouwbare klusjesdienst in Antwerpen en omgeving. Snel, netjes en kwalitatief uitgevoerd!</p>
             <div class="cta-buttons">
                 <a href="https://wa.me/32499160071" target="_blank" class="btn-whatsapp">
                     <i class="fa-brands fa-whatsapp"></i> 
                     Stuur een foto via WhatsApp – Gratis prijsindicatie
                 </a>
-                <a href="https://www.facebook.com/share/1FEiHTjVkY/?mibextid=wwXIfr" target="_blank" class="btn-facebook"><i class="fa-brands fa-facebook"></i> Facebook</a>
-                <a href="https://www.instagram.com/taqtaq.herstellingen/" target="_blank" class="btn-instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="https://www.tiktok.com/@klusjesdinstinantwerpen?_r=1&_t=ZG-9AHTWQIC68O" target="_blank" class="btn-tiktok"><i class="fa-brands fa-tiktok"></i> TikTok</a>
             </div>
         </div>
     </section>
@@ -450,15 +463,14 @@
         <div class="services-grid">
             <div class="service-card"><i class="fa-solid fa-check-circle"></i><p>Kraan herstellen of vervangen</p></div>
             <div class="service-card"><i class="fa-solid fa-check-circle"></i><p>Sifon vervangen</p></div>
-            <div class="service-card"><i class="fa-solid fa-check-circle"></i><p>Kleine waterlekken herstellen</p></div>
+            <div class="service-card"><i class="fa-solid fa-check-circle"></i><p>Waterlekken herstellen</p></div>
             <div class="service-card"><i class="fa-solid fa-check-circle"></i><p>Toilet herstellen</p></div>
             <div class="service-card"><i class="fa-solid fa-check-circle"></i><p>Wastafel herstellingen of vervangen</p></div>
-            <div class="service-card"><i class="fa-solid fa-check-circle"></i><p>Kleine herstellingen in badkamer</p></div>
+            <div class="service-card"><i class="fa-solid fa-check-circle"></i><p>Badkamer herstellingen</p></div>
             <div class="service-card"><i class="fa-solid fa-check-circle"></i><p>Kleine herstellingen in keuken</p></div>
             <div class="service-card"><i class="fa-solid fa-check-circle"></i><p>Silicone verwijderen en vernieuwen</p></div>
-            <div class="service-card"><i class="fa-solid fa-check-circle"></i><p>Kleine montagewerken</p></div>
+            <div class="service-card"><i class="fa-solid fa-check-circle"></i><p>Montagewerken</p></div>
             <div class="service-card"><i class="fa-solid fa-check-circle"></i><p>Deuren herstellingen of vervangen</p></div>
-            <div class="service-card"><i class="fa-solid fa-check-circle"></i><p>Kleine herstellingen aan ramen</p></div>
             <div class="service-card"><i class="fa-solid fa-check-circle"></i><p>Planken en meubels monteren</p></div>
             <div class="service-card"><i class="fa-solid fa-check-circle"></i><p>Gaten en beschadigingen herstellen & binnenschilderwerk</p></div>
             <div class="service-card"><i class="fa-solid fa-gears"></i><p>Kleine laswerken</p></div>
@@ -507,11 +519,11 @@
             <div class="info-box">
                 <h3><i class="fa-solid fa-address-card"></i> Contactgegevens</h3>
                 <div class="contact-details">
-                    <p><i class="fa-solid fa-user-gear"></i> TaqTaq KLUSJESDIENST</p>
+                    <p><i class="fa-solid fa-user-gear"></i> TaqTaq – Klusjesman in Antwerpen</p>
                     <p><i class="fa-solid fa-location-dot"></i> Antwerpen, België</p>
                     <p><i class="fa-solid fa-phone"></i> <a href="tel:0499160071" style="color: inherit;">0499 16 00 71</a></p>
                     <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/32499160071" target="_blank" style="color: inherit;">+32 499 16 00 71 (WhatsApp)</a></p>
-                    <p><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/taqtaq.herstellingen/" target="_blank" style="color: inherit;">@taqtaq.herstellingen</a></p>
+                    <p><i class="fa-brands fa-tiktok"></i> <a href="https://www.tiktok.com/@klusjesdinstinantwerpen?_r=1&_t=ZG-9AHTWQIC68O" target="_blank" style="color: inherit;">TikTok</a></p>
                     <p><i class="fa-solid fa-envelope"></i> <a href="mailto:taqtaq.klusjes@gmail.com" style="color: inherit;">taqtaq.klusjes@gmail.com</a></p>
                 </div>
             </div>
@@ -520,7 +532,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 TaqTaq KLUSJESDIENST. Alle rechten voorbehouden.</p>
+        <p>&copy; 2026 TaqTaq – Klusjesman in Antwerpen. Alle rechten voorbehouden.</p>
     </footer>
 
 </body>
