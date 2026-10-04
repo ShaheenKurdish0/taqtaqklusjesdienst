@@ -147,9 +147,9 @@
             background-color: #20ba5a;
         }
 
-        /* Hero Banner */
+        /* Hero Banner (Achtergrondafbeelding verwijderd) */
         .hero {
-            background: linear-gradient(135deg, rgba(20, 20, 20, 0.85), rgba(0, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1350&q=80') center/cover;
+            background: linear-gradient(135deg, #141414, #050505);
             color: var(--white);
             padding: 100px 5% 80px;
             text-align: center;
@@ -163,7 +163,7 @@
 
         .hero-subtag {
             display: inline-block;
-            background-color: rgba(255, 102, 0, 0.2);
+            background-color: rgba(255, 102, 0, 0.15);
             color: var(--primary-orange);
             border: 1px solid var(--primary-orange);
             padding: 6px 18px;
@@ -171,7 +171,6 @@
             font-size: 1.1rem;
             font-weight: 600;
             margin-bottom: 15px;
-            backdrop-filter: blur(5px);
             text-transform: uppercase;
             letter-spacing: 1px;
         }
@@ -191,23 +190,24 @@
         .cta-buttons {
             display: flex;
             justify-content: center;
+            align-items: center;
             gap: 15px;
             flex-wrap: wrap;
         }
 
-        /* WhatsApp Knop */
+        /* WhatsApp Knop (Aangepast: kleiner gemaakt) */
         .btn-whatsapp {
             background-color: #25D366;
             color: var(--white);
-            padding: 14px 28px;
-            border-radius: 30px;
+            padding: 10px 20px;
+            border-radius: 25px;
             text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
+            font-weight: 600;
+            font-size: 0.95rem;
             display: flex;
             align-items: center;
-            gap: 12px;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
             transition: transform 0.2s ease, background-color 0.3s;
         }
 
@@ -217,25 +217,31 @@
         }
 
         .btn-whatsapp i {
-            font-size: 1.8rem;
+            font-size: 1.2rem;
         }
 
+        /* TikTok Knop (Aangepast: groter logo) */
         .btn-tiktok {
             background-color: #222222;
             color: var(--white);
             border: 1px solid var(--border-color);
-            padding: 12px 25px;
+            padding: 10px 20px;
             border-radius: 25px;
             text-decoration: none;
             font-weight: 600;
+            font-size: 0.95rem;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
             transition: background 0.3s;
         }
 
         .btn-tiktok:hover {
             background-color: #333333;
+        }
+
+        .btn-tiktok i {
+            font-size: 1.3rem; /* Groter TikTok-logo */
         }
 
         /* Section Styling */
