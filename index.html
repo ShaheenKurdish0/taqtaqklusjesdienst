@@ -13,13 +13,14 @@
             --primary-orange: #FF6600;
             --dark-orange: #CC5200;
             --accent-orange: #FF8533;
-            --light-orange: #FFD8CC;
-            --black-bg: #0C0C0C;
-            --card-bg: #1A1A1A;
+            --light-orange: #FFF0EB;
+            --white-bg: #FFFFFF;
+            --card-bg-light: #F8F9FA;
             --header-bg: #141414;
-            --border-color: #2D2D2D;
+            --border-color-light: #E2E8F0;
+            --text-dark: #1A1A1A;
+            --text-muted-dark: #666666;
             --text-light: #F0F0F0;
-            --text-muted: #AAAAAA;
             --white: #FFFFFF;
         }
 
@@ -32,12 +33,12 @@
         }
 
         body {
-            background-color: var(--black-bg);
-            color: var(--text-light);
+            background-color: var(--white-bg);
+            color: var(--text-dark);
             line-height: 1.6;
         }
 
-        /* Top Bar */
+        /* Top Bar (Oranje/Donker helemaal bovenaan) */
         .top-bar {
             background-color: var(--dark-orange);
             color: var(--white);
@@ -52,16 +53,23 @@
             color: var(--white);
             text-decoration: none;
             margin-left: 12px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
         }
 
-        /* Navigation Header */
+        .top-bar .fa-tiktok {
+            font-size: 1.05rem;
+        }
+
+        /* Navigation Header (Enige ZWARTE deel op de pagina) */
         header {
             background: var(--header-bg);
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid var(--border-color);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            border-bottom: 1px solid #2D2D2D;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
         .navbar {
@@ -86,7 +94,7 @@
         }
 
         .logo-text span {
-            color: var(--text-muted);
+            color: #AAAAAA;
             font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -147,13 +155,13 @@
             background-color: #20ba5a;
         }
 
-        /* Hero Banner (Achtergrondafbeelding verwijderd) */
+        /* Hero Banner (Nu ook met WITTE achtergrond) */
         .hero {
-            background: linear-gradient(135deg, #141414, #050505);
-            color: var(--white);
-            padding: 100px 5% 80px;
+            background-color: var(--white-bg);
+            color: var(--text-dark);
+            padding: 80px 5% 60px;
             text-align: center;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color-light);
         }
 
         .hero-content {
@@ -163,7 +171,7 @@
 
         .hero-subtag {
             display: inline-block;
-            background-color: rgba(255, 102, 0, 0.15);
+            background-color: var(--light-orange);
             color: var(--primary-orange);
             border: 1px solid var(--primary-orange);
             padding: 6px 18px;
@@ -178,13 +186,13 @@
         .hero h2 {
             font-size: 2.8rem;
             margin-bottom: 15px;
-            color: var(--white);
+            color: var(--text-dark);
         }
 
         .hero p {
             font-size: 1.2rem;
             margin-bottom: 30px;
-            color: var(--text-muted);
+            color: var(--text-muted-dark);
         }
 
         .cta-buttons {
@@ -195,7 +203,7 @@
             flex-wrap: wrap;
         }
 
-        /* WhatsApp Knop (Aangepast: kleiner gemaakt) */
+        /* WhatsApp Knop */
         .btn-whatsapp {
             background-color: #25D366;
             color: var(--white);
@@ -207,7 +215,7 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.25);
             transition: transform 0.2s ease, background-color 0.3s;
         }
 
@@ -220,28 +228,32 @@
             font-size: 1.2rem;
         }
 
-        /* TikTok Knop (Aangepast: groter logo) */
+        /* TikTok Knop met groot logo */
         .btn-tiktok {
-            background-color: #222222;
+            background-color: #111111;
             color: var(--white);
-            border: 1px solid var(--border-color);
-            padding: 10px 20px;
+            border: 1px solid #111111;
+            padding: 10px 22px;
             border-radius: 25px;
             text-decoration: none;
             font-weight: 600;
             font-size: 0.95rem;
             display: flex;
             align-items: center;
-            gap: 10px;
-            transition: background 0.3s;
+            gap: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: background 0.3s, transform 0.2s;
         }
 
         .btn-tiktok:hover {
             background-color: #333333;
+            transform: scale(1.03);
         }
 
         .btn-tiktok i {
-            font-size: 1.3rem; /* Groter TikTok-logo */
+            font-size: 1.8rem; 
+            color: #FFFFFF;
+            line-height: 1;
         }
 
         /* Section Styling */
@@ -283,23 +295,24 @@
         }
 
         .service-card {
-            background: var(--card-bg);
+            background: var(--card-bg-light);
             padding: 25px;
             border-radius: 12px;
             border-left: 5px solid var(--primary-orange);
-            border-top: 1px solid var(--border-color);
-            border-right: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            border-top: 1px solid var(--border-color-light);
+            border-right: 1px solid var(--border-color-light);
+            border-bottom: 1px solid var(--border-color-light);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             display: flex;
             align-items: flex-start;
             gap: 15px;
-            transition: transform 0.3s ease, border-color 0.3s ease;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
         }
 
         .service-card:hover {
             transform: translateY(-5px);
             border-color: var(--primary-orange);
+            box-shadow: 0 8px 20px rgba(255, 102, 0, 0.12);
         }
 
         .service-card i {
@@ -310,7 +323,7 @@
 
         .service-card p {
             font-weight: 600;
-            color: var(--text-light);
+            color: var(--text-dark);
         }
 
         /* Photo Gallery */
@@ -324,8 +337,8 @@
             position: relative;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 1px solid var(--border-color-light);
             height: 220px;
         }
 
@@ -343,7 +356,7 @@
         .gallery-caption {
             position: absolute;
             bottom: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.95));
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
             color: var(--white);
             width: 100%;
             padding: 15px 10px 10px;
@@ -351,16 +364,16 @@
             text-align: center;
         }
 
-        /* Info Section (Hours & Contact) */
+        /* Info Section */
         .info-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            background: var(--card-bg);
+            background: var(--card-bg-light);
             padding: 40px;
             border-radius: 15px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+            border: 1px solid var(--border-color-light);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
         }
 
         .info-box h3 {
@@ -379,9 +392,9 @@
             display: flex;
             justify-content: space-between;
             padding: 12px 0;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color-light);
             font-size: 1.05rem;
-            color: var(--text-light);
+            color: var(--text-dark);
         }
 
         .contact-details p {
@@ -389,7 +402,7 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            color: var(--text-light);
+            color: var(--text-dark);
         }
 
         .contact-details i {
@@ -398,14 +411,18 @@
             width: 20px;
         }
 
+        .contact-details .fa-tiktok {
+            font-size: 1.4rem;
+        }
+
         /* Footer */
         footer {
-            background: var(--header-bg);
-            color: var(--text-muted);
+            background: var(--white-bg);
+            color: var(--text-muted-dark);
             text-align: center;
             padding: 25px 5%;
             margin-top: 50px;
-            border-top: 1px solid var(--border-color);
+            border-top: 1px solid var(--border-color-light);
         }
 
         /* Responsive Design */
@@ -444,7 +461,7 @@
         </div>
     </div>
 
-    <!-- Main Navigation Header -->
+    <!-- Main Navigation Header (ZWARTE BALK BOVENAAN) -->
     <header>
         <div class="navbar">
             <div class="logo">
@@ -468,7 +485,7 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section (WITTE ACHTERGROND) -->
     <section class="hero" id="home">
         <div class="hero-content">
             <div class="hero-subtag">Klusjesdienst in Antwerpen</div>
