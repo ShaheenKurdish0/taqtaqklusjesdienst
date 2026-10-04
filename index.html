@@ -10,14 +10,17 @@
     
     <style>
         :root {
-            --primary-purple: #FF6600;
-            --dark-purple: #CC5200;
-            --accent-purple: #FF8533;
-            --light-purple: #FFF0E6;
+            --primary-orange: #FF6600;
+            --dark-orange: #CC5200;
+            --accent-orange: #FF8533;
+            --light-orange: #FFD8CC;
+            --black-bg: #0C0C0C;
+            --card-bg: #1A1A1A;
+            --header-bg: #141414;
+            --border-color: #2D2D2D;
+            --text-light: #F0F0F0;
+            --text-muted: #AAAAAA;
             --white: #FFFFFF;
-            --gray-light: #F9F9FB;
-            --text-dark: #222222;
-            --text-muted: #666666;
         }
 
         * {
@@ -29,14 +32,14 @@
         }
 
         body {
-            background-color: var(--gray-light);
-            color: var(--text-dark);
+            background-color: var(--black-bg);
+            color: var(--text-light);
             line-height: 1.6;
         }
 
         /* Top Bar */
         .top-bar {
-            background-color: var(--dark-purple);
+            background-color: var(--dark-orange);
             color: var(--white);
             padding: 8px 5%;
             display: flex;
@@ -53,11 +56,12 @@
 
         /* Navigation Header */
         header {
-            background: var(--white);
+            background: var(--header-bg);
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
         }
 
         .navbar {
@@ -76,7 +80,7 @@
         }
 
         .logo-text h1 {
-            color: var(--primary-purple);
+            color: var(--primary-orange);
             font-size: 1.6rem;
             line-height: 1.1;
         }
@@ -96,13 +100,13 @@
 
         .nav-links a {
             text-decoration: none;
-            color: var(--text-dark);
+            color: var(--text-light);
             font-weight: 600;
             transition: color 0.3s;
         }
 
         .nav-links a:hover {
-            color: var(--primary-purple);
+            color: var(--primary-orange);
         }
 
         .nav-buttons {
@@ -112,7 +116,7 @@
         }
 
         .btn-call {
-            background-color: var(--primary-purple);
+            background-color: var(--primary-orange);
             color: var(--white);
             padding: 10px 20px;
             border-radius: 25px;
@@ -122,7 +126,7 @@
         }
 
         .btn-call:hover {
-            background-color: var(--accent-purple);
+            background-color: var(--accent-orange);
         }
 
         .btn-top-whatsapp {
@@ -145,10 +149,11 @@
 
         /* Hero Banner */
         .hero {
-            background: linear-gradient(135deg, rgba(255,102,0,0.9), rgba(204,82,0,0.95)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1350&q=80') center/cover;
+            background: linear-gradient(135deg, rgba(20, 20, 20, 0.85), rgba(0, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1350&q=80') center/cover;
             color: var(--white);
             padding: 100px 5% 80px;
             text-align: center;
+            border-bottom: 1px solid var(--border-color);
         }
 
         .hero-content {
@@ -158,7 +163,9 @@
 
         .hero-subtag {
             display: inline-block;
-            background-color: rgba(255, 255, 255, 0.2);
+            background-color: rgba(255, 102, 0, 0.2);
+            color: var(--primary-orange);
+            border: 1px solid var(--primary-orange);
             padding: 6px 18px;
             border-radius: 20px;
             font-size: 1.1rem;
@@ -172,12 +179,13 @@
         .hero h2 {
             font-size: 2.8rem;
             margin-bottom: 15px;
+            color: var(--white);
         }
 
         .hero p {
             font-size: 1.2rem;
             margin-bottom: 30px;
-            color: var(--light-purple);
+            color: var(--text-muted);
         }
 
         .cta-buttons {
@@ -187,7 +195,7 @@
             flex-wrap: wrap;
         }
 
-        /* Aangepaste WhatsApp Knop */
+        /* WhatsApp Knop */
         .btn-whatsapp {
             background-color: #25D366;
             color: var(--white);
@@ -199,7 +207,7 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
             transition: transform 0.2s ease, background-color 0.3s;
         }
 
@@ -213,8 +221,9 @@
         }
 
         .btn-tiktok {
-            background-color: #000000;
+            background-color: #222222;
             color: var(--white);
+            border: 1px solid var(--border-color);
             padding: 12px 25px;
             border-radius: 25px;
             text-decoration: none;
@@ -222,6 +231,11 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            transition: background 0.3s;
+        }
+
+        .btn-tiktok:hover {
+            background-color: #333333;
         }
 
         /* Section Styling */
@@ -237,7 +251,7 @@
         }
 
         .section-title h2 {
-            color: var(--primary-purple);
+            color: var(--primary-orange);
             font-size: 2.2rem;
             position: relative;
             display: inline-block;
@@ -252,7 +266,7 @@
             transform: translateX(-50%);
             width: 60px;
             height: 3px;
-            background-color: var(--accent-purple);
+            background-color: var(--accent-orange);
         }
 
         /* Services Grid */
@@ -263,30 +277,34 @@
         }
 
         .service-card {
-            background: var(--white);
+            background: var(--card-bg);
             padding: 25px;
             border-radius: 12px;
-            border-left: 5px solid var(--primary-purple);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--primary-orange);
+            border-top: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             display: flex;
             align-items: flex-start;
             gap: 15px;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, border-color 0.3s ease;
         }
 
         .service-card:hover {
             transform: translateY(-5px);
+            border-color: var(--primary-orange);
         }
 
         .service-card i {
-            color: var(--primary-purple);
+            color: var(--primary-orange);
             font-size: 1.5rem;
             margin-top: 3px;
         }
 
         .service-card p {
             font-weight: 600;
-            color: var(--text-dark);
+            color: var(--text-light);
         }
 
         /* Photo Gallery */
@@ -300,7 +318,8 @@
             position: relative;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            border: 1px solid var(--border-color);
             height: 220px;
         }
 
@@ -318,8 +337,8 @@
         .gallery-caption {
             position: absolute;
             bottom: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.8));
-            color: white;
+            background: linear-gradient(transparent, rgba(0,0,0,0.95));
+            color: var(--white);
             width: 100%;
             padding: 15px 10px 10px;
             font-size: 0.9rem;
@@ -331,14 +350,15 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            background: var(--white);
+            background: var(--card-bg);
             padding: 40px;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.4);
         }
 
         .info-box h3 {
-            color: var(--primary-purple);
+            color: var(--primary-orange);
             margin-bottom: 20px;
             display: flex;
             align-items: center;
@@ -353,8 +373,9 @@
             display: flex;
             justify-content: space-between;
             padding: 12px 0;
-            border-bottom: 1px solid #eeeeee;
+            border-bottom: 1px solid var(--border-color);
             font-size: 1.05rem;
+            color: var(--text-light);
         }
 
         .contact-details p {
@@ -362,21 +383,23 @@
             display: flex;
             align-items: center;
             gap: 12px;
+            color: var(--text-light);
         }
 
         .contact-details i {
-            color: var(--primary-purple);
+            color: var(--primary-orange);
             font-size: 1.2rem;
             width: 20px;
         }
 
         /* Footer */
         footer {
-            background: var(--dark-purple);
-            color: var(--white);
+            background: var(--header-bg);
+            color: var(--text-muted);
             text-align: center;
             padding: 25px 5%;
             margin-top: 50px;
+            border-top: 1px solid var(--border-color);
         }
 
         /* Responsive Design */
@@ -419,7 +442,7 @@
     <header>
         <div class="navbar">
             <div class="logo">
-                <i class="fa-solid fa-screwdriver-wrench fa-2x" style="color: var(--primary-purple);"></i>
+                <i class="fa-solid fa-screwdriver-wrench fa-2x" style="color: var(--primary-orange);"></i>
                 <div class="logo-text">
                     <h1>TaqTaq</h1>
                     <span>Klusjesman in Antwerpen</span>
